@@ -1,0 +1,10 @@
+<nav class="navbar navbar-expand navbar-light bg-light">
+    <div class="nav navbar-nav">
+        <a
+          *ngFor="let navItem of navItems$ | async"
+          class="nav-item nav-link"
+          [routerLink]="navItem.url">
+            {{ navItem.text }}
+        </a>
+    </div>
+</nav>
