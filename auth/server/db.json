@@ -1,8 +1,17 @@
 {
   "navItems": [
-    {"url": "/", "text": "Home"},
-    {"url": "/login", "text": "Login"},
-    {"url": "/user", "text": "User"}
+    {
+      "url": "/",
+      "text": "Home"
+    },
+    {
+      "url": "/login",
+      "text": "Login"
+    },
+    {
+      "url": "/user",
+      "text": "User"
+    }
   ],
   "users": [
     {
@@ -11,7 +20,8 @@
       "lastName": "Claessens",
       "email": "jclaessens0@cisco.com",
       "address": "5 Sheridan Terrace",
-      "ipAddress": "137.236.149.238"
+      "ipAddress": "137.236.149.238",
+      "password": "$2a$10$nNpq7XT507yX3W/o1kK4HOnh3qr.FzcrsWdgQRzTn9oPrdwDcLkoO"
     },
     {
       "id": 2,
@@ -19,7 +29,8 @@
       "lastName": "Braney",
       "email": "rbraney1@pen.io",
       "address": "91346 Sutteridge Lane",
-      "ipAddress": "10.164.164.24"
+      "ipAddress": "10.164.164.24",
+      "password": "$2a$10$m1hy.Q8IRdahla9bdsqqWeCe8uqF3/gjSkypRF5pdSBAmSP9NyFDK"
     },
     {
       "id": 3,
@@ -27,7 +38,8 @@
       "lastName": "Lantuff",
       "email": "flantuff2@reddit.com",
       "address": "24518 Harper Pass",
-      "ipAddress": "73.145.246.23"
+      "ipAddress": "73.145.246.23",
+      "password": "$2a$10$Cmbs6MNz.iKp2cV92y37EOmIAAPhYW8YHJ87QywtZ5pT.oazO.da6"
     },
     {
       "id": 4,
@@ -35,7 +47,8 @@
       "lastName": "de Savery",
       "email": "tdesavery3@discuz.net",
       "address": "1 Kedzie Terrace",
-      "ipAddress": "205.37.33.170"
+      "ipAddress": "205.37.33.170",
+      "password": "$2a$10$BC03IlTlr7dhtPkHmHKfQOPJTHc09nPsi/cjlmXp/PO3Tkbcy5DIm"
     },
     {
       "id": 5,
@@ -43,7 +56,8 @@
       "lastName": "Glasser",
       "email": "bglasser4@ameblo.jp",
       "address": "09500 Prairieview Hill",
-      "ipAddress": "192.118.226.66"
+      "ipAddress": "192.118.226.66",
+      "password": "$2a$10$4MZqRe/IO6oZIW4gzLMpYOLWwBsakhkUzngItk07A3402KKhInVwm"
     },
     {
       "id": 6,
@@ -51,7 +65,8 @@
       "lastName": "Hackworth",
       "email": "fhackworth5@yahoo.co.jp",
       "address": "4 Kings Alley",
-      "ipAddress": "1.241.200.109"
+      "ipAddress": "1.241.200.109",
+      "password": "$2a$10$U6OJoMnMBtNXnDFHHaBSWOaB56JnJTNvrIda3BtbmUsU3ckh4mHSG"
     },
     {
       "id": 7,
@@ -59,7 +74,8 @@
       "lastName": "Gregol",
       "email": "igregol6@mapquest.com",
       "address": "44956 Hintze Hill",
-      "ipAddress": "43.56.147.122"
+      "ipAddress": "43.56.147.122",
+      "password": "$2a$10$v7zeFGG9SKMal5FVUQPuaekX3Xtvrk1TeuIX29dJGfcZfqRnCMccO"
     },
     {
       "id": 8,
@@ -67,7 +83,8 @@
       "lastName": "Toulson",
       "email": "htoulson7@dailymotion.com",
       "address": "566 8th Junction",
-      "ipAddress": "161.189.241.26"
+      "ipAddress": "161.189.241.26",
+      "password": "$2a$10$ZsGOPWU8mAN6MHXe7/rlsOAFG90OJHuXAIIdet5oDrbrzK/qtCJ1m"
     },
     {
       "id": 9,
@@ -75,7 +92,8 @@
       "lastName": "Mackney",
       "email": "bmackney8@sphinn.com",
       "address": "819 Orin Trail",
-      "ipAddress": "197.79.114.195"
+      "ipAddress": "197.79.114.195",
+      "password": "$2a$10$RYtdwjRyuEluxE5rD7JUVeAFT/vlXbdJlW3UhDwukYRuAOOZLsfzG"
     },
     {
       "id": 10,
@@ -83,7 +101,8 @@
       "lastName": "Jewkes",
       "email": "wjewkes9@phpbb.com",
       "address": "769 Straubel Crossing",
-      "ipAddress": "2.230.83.31"
+      "ipAddress": "2.230.83.31",
+      "password": "$2a$10$KeJOANMz8uYdk3gFa0NYZ.O0GsuOR0QQF/vbVk1d0RcjjblHs.Lw2"
     },
     {
       "id": 11,

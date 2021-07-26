@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
+import { map, switchMap, tap } from 'rxjs/operators';
 import { User } from '../model/user';
 import { ConfigService } from './config.service';
 import { UserService } from './user.service';
@@ -18,6 +19,7 @@ export class AuthService {
     return this.currentUserSubject$.getValue();
   }
   lastToken: string = '';
+  loginUrl: string = `${this.config.apiUrl}login`;
 
   constructor(
     private http: HttpClient,
@@ -30,14 +32,37 @@ export class AuthService {
     {
       const user: User = JSON.parse(localUser);
       this.currentUserSubject$.next(user);
+      this.lastToken = user.token || '';
     }
   }
 
-  login(): void {
-    sessionStorage.setItem(this.userObjectName, this.lastToken);
+  login(loginData: User): Observable<User | null> {
+    return this.http.post<{accessToken: string}>(this.loginUrl, loginData).pipe(
+      switchMap(response => {
+        if (response.accessToken) {
+          this.lastToken = response.accessToken;
+          return this.userService.query(`email=${loginData.email}`);
+        }
+        return of(null);
+      }),
+      map(user => user ? user[0] : null),
+      tap(user => {
+        if (user)
+        {
+          user.token = this.lastToken;
+          this.currentUserSubject$.next(user);
+          sessionStorage.setItem(this.userObjectName, JSON.stringify(user));
+        }
+        else {
+          this.logOut();
+        }
+      }));
   }
 
   logOut(): void {
-
+    sessionStorage.removeItem(this.userObjectName);
+    this.currentUserSubject$.next(null);
+    this.lastToken = '';
+    this.router.navigate(['login']);
   }
 }

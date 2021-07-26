@@ -23,8 +23,8 @@ export abstract class BaseService<T extends {id?: number}> {
     return this.http.get<T>(`${this.config.apiUrl}${this.entityName}/${id}`);
   }
 
-  query(queryString: string): Observable<T> {
-    return this.http.get<T>(`${this.config.apiUrl}${this.entityName}?${queryString}`);
+  query(queryString: string): Observable<T[]> {
+    return this.http.get<T[]>(`${this.config.apiUrl}${this.entityName}?${queryString}`);
   }
 
   create(entity: T): Observable<T> {
