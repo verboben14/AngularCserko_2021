@@ -14,6 +14,7 @@ import { NavComponent } from './common/nav/nav.component';
 import { ConfigService } from './service/config.service';
 import { JwtInterceptor } from './service/jwt.interceptor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FibonacciPipe } from './pipe/fibonacci.pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     UserEditComponent,
     ForbiddenComponent,
     NavComponent,
+    FibonacciPipe,
   ],
   imports: [
     BrowserModule,

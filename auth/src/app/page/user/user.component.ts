@@ -11,6 +11,8 @@ import { UserService } from 'src/app/service/user.service';
 export class UserComponent implements OnInit {
 
   userList$: Observable<User[]> = this.userService.getAll();
+  roleNames: string[] = ['visitor', 'viewer', 'editor', 'admin'];
+  searchPhrase: string = '';
 
   constructor(
     private userService: UserService
@@ -19,4 +21,7 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getRoleName(roleId: number | undefined): string {
+    return roleId ? this.roleNames[roleId] : this.roleNames[0];
+  }
 }
