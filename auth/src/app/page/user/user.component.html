@@ -13,12 +13,21 @@
       </thead>
       <tbody>
         <tr *ngFor="let user of userList$ | async">
-          <th>{{ user.firstName }}</th>
-          <th>{{ user.lastName }}</th>
-          <th>{{ user.email }}</th>
-          <th>{{ user.address }}</th>
-          <th>{{ user.ipAddress }}</th>
-          <th></th>
+          <td>{{ user.firstName }}</td>
+          <td>{{ user.lastName }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.address }}</td>
+          <td>{{ user.ipAddress }}</td>
+          <td>
+            <div class="btn-group">
+              <button [routerLink]="['/', 'user-edit', user.id]" class="btn btn-info">
+                edit
+              </button>
+              <button class="btn btn-info">
+                delete
+              </button>
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>

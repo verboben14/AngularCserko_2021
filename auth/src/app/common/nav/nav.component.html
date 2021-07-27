@@ -6,5 +6,11 @@
           [routerLink]="navItem.url">
             {{ navItem.text }}
         </a>
+        <a *ngIf="!(user$ | async)" routerLink="/login" class="nav-item nav-link pull-right">
+          Login
+        </a>
+        <button (click)="onLogout()" *ngIf="user$ | async" class="nav-item nav-link btn btn-default pull-right">
+          Logout
+        </button>
     </div>
 </nav>

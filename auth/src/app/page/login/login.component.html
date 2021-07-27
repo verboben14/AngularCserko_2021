@@ -1,1 +1,18 @@
-<button (click)='setPasswords()' class="btn btn-success">Set Passwords</button>
+<div class="row">
+  <div class="col-lg-6 offset-lg-3 col-12 mt-5">
+    <h3>Login</h3>
+    <form #loginForm="ngForm" (ngSubmit)="onLogin()">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input [(ngModel)]="loginData.email" id="email" name="email" type="email" email class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input [(ngModel)]="loginData.password" id="password" name="password" type="password" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">
+        Login
+      </button>
+    </form>
+  </div>
+</div>

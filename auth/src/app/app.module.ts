@@ -13,6 +13,7 @@ import { ForbiddenComponent } from './page/forbidden/forbidden.component';
 import { NavComponent } from './common/nav/nav.component';
 import { ConfigService } from './service/config.service';
 import { JwtInterceptor } from './service/jwt.interceptor';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,8 @@ import { JwtInterceptor } from './service/jwt.interceptor';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     {
