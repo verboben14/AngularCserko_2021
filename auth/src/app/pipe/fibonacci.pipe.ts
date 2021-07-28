@@ -1,6 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import memo from 'memo-decorator';
 
+const cache = new Map();
+
 const fibonacci = (num: number): number => {
   if (num <= 1) {
     return 1;
@@ -14,10 +16,13 @@ const fibonacci = (num: number): number => {
 export class FibonacciPipe implements PipeTransform {
 
   @memo({
-    resolver: (...args) => `key-${args[0]}`
+    resolver: (...args) => {
+      console.log(cache);
+      return `key-${args[0]}`;
+    },
+    cache
   })
   transform(value: number): number {
-    console.log('run');
     return fibonacci(value);
   }
 }

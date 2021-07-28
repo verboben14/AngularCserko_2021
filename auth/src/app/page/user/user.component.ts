@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { User } from 'src/app/model/user';
+import { ConfigService, ITableColumn } from 'src/app/service/config.service';
 import { UserService } from 'src/app/service/user.service';
 
 @Component({
@@ -11,11 +12,13 @@ import { UserService } from 'src/app/service/user.service';
 export class UserComponent implements OnInit {
 
   userList$: Observable<User[]> = this.userService.getAll();
+  columns$: BehaviorSubject<ITableColumn[]> = this.configService.userTableColumns$;
   roleNames: string[] = ['visitor', 'viewer', 'editor', 'admin'];
   searchPhrase: string = '';
 
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    public configService: ConfigService,
   ) { }
 
   ngOnInit(): void {

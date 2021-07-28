@@ -15,6 +15,10 @@ import { ConfigService } from './service/config.service';
 import { JwtInterceptor } from './service/jwt.interceptor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FibonacciPipe } from './pipe/fibonacci.pipe';
+import { SearchFieldComponent } from './common/search-field/search-field.component';
+import { FilterPipe } from './pipe/filter.pipe';
+import { IndexMapperPipe } from './pipe/index-mapper.pipe';
+import { XpipePipe } from './pipe/xpipe.pipe';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,10 @@ import { FibonacciPipe } from './pipe/fibonacci.pipe';
     ForbiddenComponent,
     NavComponent,
     FibonacciPipe,
+    SearchFieldComponent,
+    FilterPipe,
+    IndexMapperPipe,
+    XpipePipe,
   ],
   imports: [
     BrowserModule,
